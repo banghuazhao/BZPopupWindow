@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BZPopupWindow_Example' do
+  pod 'BZPopupWindow', :path => '../'
+
+  target 'BZPopupWindow_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
