@@ -27,7 +27,7 @@ let action = BZPopupAction(title: "Ok")
 popupWindow.addAction(action)
 present(popupWindow, animated: true, completion: nil)
 ```
-<img src="./resources/default.png" width="240">
+<img src="https://github.com/banghuazhao/BZPopupWindow/blob/master/resources/default.png?raw=true" width="240">
 
 ### 2. Show Method
 You can also use show method to show the popup window. You can also change the text aligment.
@@ -38,7 +38,7 @@ let popupWindow = BZPopupWindow(title: title, message: message)
 popupWindow.messageAligment = .left
 popupWindow.show(completion: nil)
 ```
-<img src="./resources/show.png" width="240">
+<img src="https://github.com/banghuazhao/BZPopupWindow/blob/master/resources/show.png?raw=true" width="240">
 
 ### 3. Double Button
 This example creates double button in popup window. It also creates custom title and message (attributed string). Also, it provides a completion handler to action2. What's more, there is a clickable link in the message.
@@ -66,7 +66,7 @@ popupWindow.addAction(action1)
 popupWindow.addAction(action2)
 present(popupWindow, animated: true, completion: nil)
 ```
-<img src="./resources/double_button.png" width="240">
+<img src="https://github.com/banghuazhao/BZPopupWindow/blob/master/resources/double_button.png?raw=true" width="240">
 
 ### 4. Custom View
 This example creates a custom view in popup window. The custom view is a UIScrollView. This example can be used to show terms of use. Also, the color of button is customized.
@@ -103,7 +103,7 @@ popupWindow.addAction(action1)
 popupWindow.addAction(action2)
 popupWindow.show(completion: nil)
 ```
-<img src="./resources/custom_view.png" width="240">
+<img src="https://github.com/banghuazhao/BZPopupWindow/blob/master/resources/custom_view.png?raw=true" width="240">
 
 ### 5. Custom Animation
 The left hand side is default animation. The right hand side is transition from bottom animation.
@@ -117,8 +117,8 @@ popupWindow.addAction(action)
 popupWindow.show(animationType: .bottom, completion: nil) // transition from bottom
 ```
 <p float="left">
-  <img src="./resources/animation_default.gif" width="240">
-  <img src="./resources/animation_bottom.gif" width="240">
+  <img src="https://github.com/banghuazhao/BZPopupWindow/blob/master/resources/animation_default.gif?raw=true" width="240">
+  <img src="https://github.com/banghuazhao/BZPopupWindow/blob/master/resources/animation_bottom.gif?raw=true" width="240">
 </p>
 
 
