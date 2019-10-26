@@ -1,0 +1,29 @@
+{
+  "name": "BZPopupWindow",
+  "version": "0.1.0",
+  "summary": "A versatile, customizable and lightweight popup window",
+  "description": "TODO: Add long description of the pod here.",
+  "swift_versions": "5.0",
+  "homepage": "https://github.com/banghuazhao/BZPopupWindow",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "banghuazhao": "banghua.zhao@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/banghuazhao/BZPopupWindow.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "BZPopupWindow/Classes/**/*",
+  "dependencies": {
+    "SnapKit": [
+      "~> 5.0"
+    ]
+  },
+  "swift_version": "5.0"
+}

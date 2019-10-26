@@ -1,0 +1,6 @@
+framework module BZPopupWindow {
+  umbrella header "BZPopupWindow-umbrella.h"
+
+  export *
+  module * { export * }
+}

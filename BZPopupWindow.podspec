@@ -9,7 +9,8 @@
 Pod::Spec.new do |s|
   s.name             = 'BZPopupWindow'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BZPopupWindow.'
+  s.summary          = 'A versatile, customizable and lightweight popup window'
+  s.swift_version    = '5.0'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,9 +18,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'This popup window is a supplement to UIAlterController. The default UIAlterController can\'t add images, custom views or custom animation. This pop window can show images, custom title and message, custom view, and custom animation. It also has a more approperate UI design than the default UIAlterController (larger width and adaptive height)'
 
   s.homepage         = 'https://github.com/banghuazhao/BZPopupWindow'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -28,7 +27,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/banghuazhao/BZPopupWindow.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'BZPopupWindow/Classes/**/*'
   
@@ -39,4 +38,5 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'SnapKit', '~> 5.0'
 end
