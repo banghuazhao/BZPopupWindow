@@ -11,10 +11,10 @@ public enum DDPopupWindowAnimationType {
     case none
     case fade
     case zoom
-    case translationLeft
-    case translationRight
-    case translationTop
-    case translationBottom
+    case left
+    case right
+    case top
+    case bottom
 }
 
 final class PresentationManager: NSObject {

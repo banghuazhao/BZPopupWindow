@@ -73,28 +73,28 @@ extension PresentationAnimator: UIViewControllerAnimatedTransitioning {
                 controller.view.snp.makeConstraints { make in make.center.equalToSuperview() }
                 controller.view.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
             }
-        case .translationTop:
+        case .top:
             animationTypeBlock = {
                 controller.view.snp.makeConstraints { make in
                     make.centerX.equalToSuperview()
                     make.centerY.equalToSuperview().offset(-containerView.bounds.height / 2)
                 }
             }
-        case .translationBottom:
+        case .bottom:
             animationTypeBlock = {
                 controller.view.snp.makeConstraints { make in
                     make.centerX.equalToSuperview()
                     make.centerY.equalToSuperview().offset(containerView.bounds.height / 2)
                 }
             }
-        case .translationLeft:
+        case .left:
             animationTypeBlock = {
                 controller.view.snp.makeConstraints { make in
                     make.centerX.equalToSuperview().offset(-containerView.bounds.width / 2)
                     make.centerY.equalToSuperview()
                 }
             }
-        case .translationRight:
+        case .right:
             animationTypeBlock = {
                 controller.view.snp.makeConstraints { make in
                     make.centerX.equalToSuperview().offset(containerView.bounds.width / 2)

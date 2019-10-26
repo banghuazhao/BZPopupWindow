@@ -106,7 +106,9 @@ class DemoController: UIViewController {
 
         let popupWindow = BZPopupWindow(title: attributedTitle, message: attributedMessage)
         let action1 = BZPopupAction(title: "Cancel", style: .cancel)
-        let action2 = BZPopupAction(title: "Ok")
+        let action2 = BZPopupAction(title: "Ok") {
+            print("Ok")
+        }
         popupWindow.addAction(action1)
         popupWindow.addAction(action2)
         present(popupWindow, animated: true, completion: nil)
@@ -153,7 +155,8 @@ class DemoController: UIViewController {
         let popupWindow = BZPopupWindow(image: nil, imageSize: CGSize(width: 60, height: 60), title: title, message: message)
         let action = BZPopupAction(title: "Ok")
         popupWindow.addAction(action)
-        popupWindow.show(animationType: .translationBottom, completion: nil)
+//        popupWindow.show(completion: nil) // default animation
+        popupWindow.show(animationType: .bottom, completion: nil) // transition from bottom
     }
 }
 
