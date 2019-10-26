@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = 'This popup window is a supplement to UIAlterController. The default UIAlterController can\'t add images, custom views or custom animation. This pop window can show images, custom title and message, custom view, and custom animation. It also has a more approperate UI design than the default UIAlterController (larger width and adaptive height)'
+  s.description      = 'This popup window is a supplement to UIAlterController. The default UIAlterController can\'t add images, custom views or custom animation. This pop window can show images, custom title and message, custom view, and custom animation. It also has a more appropriate UI design than the default UIAlterController (larger width and adaptive height)'
 
   s.homepage         = 'https://github.com/banghuazhao/BZPopupWindow'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
