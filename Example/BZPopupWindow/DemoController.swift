@@ -50,6 +50,12 @@ class DemoController: UIViewController {
         button.addTarget(self, action: #selector(animationTypeDemo), for: .touchDown)
         return button
     }()
+    
+    lazy var customSizeButton: CustomButton = {
+        let button = CustomButton(title: "Custom Size Type")
+        button.addTarget(self, action: #selector(customSizeDemo), for: .touchDown)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +74,7 @@ class DemoController: UIViewController {
         stackView.addArrangedSubview(doubleButton)
         stackView.addArrangedSubview(customContentViewButton)
         stackView.addArrangedSubview(animationTypeButton)
-
+        stackView.addArrangedSubview(customSizeButton)
     }
 
     @objc func basicDemo() {
@@ -157,6 +163,16 @@ class DemoController: UIViewController {
         popupWindow.addAction(action)
 //        popupWindow.show(completion: nil) // default animation
         popupWindow.show(animationType: .bottom, completion: nil) // transition from bottom
+    }
+    
+    @objc func customSizeDemo() {
+        let title = "TitTitleTitle"
+        let message = "AnimationFromBottomAnimationFromBottomAnimationFromBottomAnimationFromBottomAnimationFromBottomAnimationFromBottomAnimationFromBottomAnimationFromBottomAnimationFromBottomAnimationFromBottomAnimationFromBottomAnimationFromBottomAnimationFromBottomAnimationFromBottomAnimation"
+        let popupWindow = BZPopupWindow(image: nil, imageSize: CGSize(width: 60, height: 60), title: title, message: message)
+        popupWindow.edgeInset = 24
+        popupWindow.width = 320
+        popupWindow.messageAligment = .left
+        popupWindow.show(animationType: .fade, completion: nil) // transition from bottom
     }
 }
 
