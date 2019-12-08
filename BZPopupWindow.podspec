@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BZPopupWindow'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A versatile, customizable and lightweight popup window'
   s.swift_version    = '5.0'
 
