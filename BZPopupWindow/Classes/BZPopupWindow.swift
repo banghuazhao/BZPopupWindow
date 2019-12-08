@@ -20,6 +20,13 @@ public class BZPopupWindow: UIViewController {
     
     public var titleAligment: NSTextAlignment = .center
     public var messageAligment: NSTextAlignment = .center
+    
+    public var width: CGFloat = 310
+    public var edgeInset: CGFloat = 25
+    
+    private var contentWidth: CGFloat {
+        return width - 2*edgeInset
+    }
 
     private var presentationManager = PresentationManager()
 
@@ -139,13 +146,13 @@ public class BZPopupWindow: UIViewController {
         view.backgroundColor = UIColor.backgroundColor
         view.layer.cornerRadius = 10
         view.snp.makeConstraints { make in
-            make.width.equalTo(310)
+            make.width.equalTo(width)
         }
 
         // add stack view
         view.addSubview(stackView)
         stackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(25)
+            make.edges.equalToSuperview().inset(edgeInset)
         }
 
         // add image
@@ -153,10 +160,10 @@ public class BZPopupWindow: UIViewController {
             imageView.image = image
             imageView.snp.makeConstraints { make in
                 make.height.equalTo(imageSize.height)
-                make.width.equalTo(260)
+                make.width.equalTo(contentWidth)
             }
             stackView.addArrangedSubview(imageView)
-            stackView.addArrangedSubview(SpaceView(height: 20, width: 260))
+            stackView.addArrangedSubview(SpaceView(height: 20, width: contentWidth))
         }
 
         // add attribuated title
@@ -164,7 +171,7 @@ public class BZPopupWindow: UIViewController {
             attributedTitleTextView.attributedText = attributedTitle
             attributedTitleTextView.textAlignment = titleAligment
             stackView.addArrangedSubview(attributedTitleTextView)
-            stackView.addArrangedSubview(SpaceView(height: 10, width: 260))
+            stackView.addArrangedSubview(SpaceView(height: 10, width: contentWidth))
         }
 
         // add attribuated message
@@ -181,10 +188,10 @@ public class BZPopupWindow: UIViewController {
 
         // add action buttons
         if !actions.isEmpty {
-            var buttonWidth: CFloat = 260
+            var buttonWidth: CGFloat = contentWidth
             if actions.count == 2 {
                 buttonStackView.axis = .horizontal
-                buttonWidth = 125
+                buttonWidth = ( contentWidth - 10 ) / 2
             } else {
                 buttonStackView.axis = .vertical
             }
@@ -197,7 +204,7 @@ public class BZPopupWindow: UIViewController {
                 buttonStackView.addArrangedSubview(button)
                 button.addTarget(self, action: #selector(actionButtonTapped(_:)), for: .touchUpInside)
             }
-            stackView.addArrangedSubview(SpaceView(height: 20, width: 260))
+            stackView.addArrangedSubview(SpaceView(height: 20, width: contentWidth))
             stackView.addArrangedSubview(buttonStackView)
         }
     }
