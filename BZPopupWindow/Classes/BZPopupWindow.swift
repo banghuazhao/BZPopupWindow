@@ -18,11 +18,11 @@ open class BZPopupWindow: UIViewController {
     public var imageSize: CGSize = CGSize(width: 80, height: 80)
     public var actions = [BZPopupAction]()
     
-    public var titleAligment: NSTextAlignment = .center
-    public var messageAligment: NSTextAlignment = .center
+    open var titleAligment: NSTextAlignment = .center
+    open var messageAligment: NSTextAlignment = .center
     
-    public var width: CGFloat = 310
-    public var edgeInset: CGFloat = 25
+    open var width: CGFloat = 310
+    open var edgeInset: CGFloat = 25
     
     private var contentWidth: CGFloat {
         return width - 2*edgeInset
