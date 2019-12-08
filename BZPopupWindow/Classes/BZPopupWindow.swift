@@ -9,7 +9,7 @@ import UIKit
 
 import SnapKit
 
-public class BZPopupWindow: UIViewController {
+open class BZPopupWindow: UIViewController {
     // MARK: - Properties
 
     public var attributedTitle: NSAttributedString?
