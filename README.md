@@ -12,6 +12,18 @@ BZPopupWindow a versatile, customizable and lightweight popup window written in 
 - [x] Supports images, custom title and message, custom view, and custom animation
 - [x] More appropriate UI design than the default UIAlterController
 
+## Requirements
+This version requires iOS 10.0+ and Swift 5.
+
+## Installation
+
+BZPopupWindow is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'BZPopupWindow'
+```
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -121,18 +133,6 @@ popupWindow.show(animationType: .bottom, completion: nil) // transition from bot
   <img src="https://github.com/banghuazhao/BZPopupWindow/blob/master/resources/animation_bottom.gif?raw=true" width="240">
 </p>
 
-
-## Requirements
-This version requires iOS 10.0+ and Swift 5.
-
-## Installation
-
-BZPopupWindow is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'BZPopupWindow'
-```
 
 ## Author
 
